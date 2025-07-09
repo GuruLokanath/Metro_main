@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metro Mingle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Metro Mingle</h1>
+        <p>Select an option below to get started:</p>
+        <div class="options">
+            <div class="card">
+                <h2>Book a Venue</h2>
+                <p>Find and book the perfect venue for your event.</p>
+                <button onclick="showBooking('index1.html')">Book Venue</button>
+            </div>
+            <div class="card">
+                <h2>Birthday Parties</h2>
+                <p>Plan a memorable birthday party with us.</p>
+                <button onclick="index1.html">Book Birthday Party</button>
+            </div>
+            <div class="card">
+                <h2>Essentials</h2>
+                <p>Get all the essentials you need for your event.</p>
+                <button onclick="showBooking('essentials')">Book Essentials</button>
+            </div>
+        </div>
+        <div id="message"></div>
+    </div>
+    <script>
+        function showBooking(type) {
+            let msg = '';
+            if (type === 'venue') {
+                msg = 'Venue booking coming soon! Stay tuned.';
+            } else if (type === 'birthday') {
+                msg = 'Birthday party booking coming soon! Stay tuned.';
+            } else if (type === 'essentials') {
+                msg = 'Essentials booking coming soon! Stay tuned.';
+            }
+            document.getElementById('message').textContent = msg;
+        }
+    </script>
+</body>
+</html> 
